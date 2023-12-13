@@ -1,0 +1,86 @@
+<!-- reservation.component.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/agence">Notre Agence</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nos voitures</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/login">Espace d'administrateur</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <h1>Réservation</h1>
+    <hr>
+    <form (ngSubmit)="onSubmit()" #reservationForm="ngForm">
+        <div class="form-group">
+            <label>Date de début</label>
+            <label for="date_debut">Date de début</label>
+            <input type="datetime-local" class="form-control" id="date_debut" name="date_debut" [(ngModel)]="newReservation.date_debut" required>
+
+            <label for="date_fin">Date de fin</label>
+            <input type="datetime-local" class="form-control" id="date_fin" name="date_fin" [(ngModel)]="newReservation.date_fin" required>
+
+            
+        </div>
+        <button id="submitButton" type="submit" class="btn btn-primary">Préserver</button>
+    </form>
+    <hr>
+</div>
+
+<!--<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope ="col"></th>
+        <th scope="col">Date début réservation</th>
+        <th scope="col">Date fin réservation</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of reservationArray; index as i">
+        <td>{{t.id}}</td>
+        <td>{{ t.clientData?.nom || 'N/A' }}</td>
+        <td>{{ t.date_debut }}</td>
+        <td>{{ t.date_fin }}</td>
+        
+        <td><button class="btn btn-warning btn-sm" (click)="onUpdate(i)">Update</button></td>
+        <td><button class="btn btn-danger btn-sm" (click)="onDelete(i)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>-->
+<footer class="footer">
+    <p>&copy; 2023 Agence de location de voitures AutoCar</p>
+    <p>Contactez-nous : info@locationvoitures.com</p>
+  
+    <!-- Liens vers les réseaux sociaux -->
+    <p>Suivez-nous :</p>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png"
+        alt="Instagram" style="width: 50px; height: 50px;">
+    </a>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+      <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/facebook-512.png" alt="Facebook"style="width: 50px; height: 50px;">
+    </a>
+  </footer>
+
+  

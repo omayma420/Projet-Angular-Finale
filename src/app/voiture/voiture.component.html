@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('https://www.largus.fr/images/styles/diaporama_viewer/public/images/peugeot-208-2022-duo-jaune-rouge-mk-bdredimensionner.jpg?itok=zo5SaVLP');
+            background-size: cover;
+            background-position: center;
+            margin: 0; /* Réinitialiser la marge par défaut */
+            padding: 0; /* Réinitialiser le rembourrage par défaut */
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 1; /* Pour placer la navbar au-dessus de l'image d'arrière-plan */
+        }
+
+        .container {
+            margin-top: 4rem; /* Ajuster selon vos besoins */
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            position: relative; /* Pour définir la position relative et empêcher le débordement de l'image */
+            z-index: 2; /* Pour placer le contenu au-dessus de l'image d'arrière-plan */
+        }
+
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .card {
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/agence">Notre Agence</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/voiture">Nos voitures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Espace d'administrateur</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Nos Voitures</h1>
+        <div class="d-flex flex-wrap">
+            <!-- Utilisation de la directive *ngFor pour itérer sur les voitures -->
+            <div *ngFor="let voiture of voitureArray" class="card" style="width: 20rem;">
+                <img [src]="voiture.imageUrl" class="card-img-top" alt="Image de la voiture">
+                <div class="card-body">
+                    <h4 class="card-text" title="Marque">Modèle: {{ voiture.modele }}</h4>
+                    <p class="card-text">Marque: {{ voiture.marque?.nomMar || 'Non spécifiée' }}</p>
+                    <p class="card-text">Couleur: {{ voiture.couleur }}</p>
+                    <p class="card-text">Année de fabrication: {{ voiture.date_fab }}</p>
+                    <p class="card-text">Prix de location: {{ voiture.prix_location }}</p>
+                    <!-- Ajoutez d'autres détails de la voiture si nécessaire -->
+                    <a  (click)="reserverVoiture(voiture)" class="btn btn-primary">Réserver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ajoutez vos scripts et autres balises body si nécessaire -->
+</body>
+
+
+
+
+<footer class="footer">
+    <p>&copy; 2023 Agence de location de voitures AutoCar</p>
+    <p>Contactez-nous : info@locationvoitures.com</p>
+  
+    <!-- Liens vers les réseaux sociaux -->
+    <p>Suivez-nous :</p>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png"
+        alt="Instagram" style="width: 50px; height: 50px;">
+    </a>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+      <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/facebook-512.png" alt="Facebook"style="width: 50px; height: 50px;">
+    </a>
+  </footer>
+
+
+</html>

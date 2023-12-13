@@ -1,0 +1,88 @@
+<!-- facture.component.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/agence">Notre Agence</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/voiture">Nos voitures</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Espace d'administrateur</a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<div #htmlData class="invoice">
+  <div class="invoice-header">
+    <img src="assets/logo.png" alt="Logo" class="logo">
+  
+    <h1>Facture</h1>
+    <p>Date de facture: {{ todayDate | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
+  </div>
+  
+
+  <div class="client-info">
+    <h2>Client Information</h2>
+    <p><strong>Nom:</strong> {{ getClientData()?.nom || 'N/A' }}</p>
+    <!-- Ajoutez plus d'informations sur le client au besoin -->
+  </div>
+  
+
+  <div class="voiture-info">
+    <h2>Voiture Information</h2>
+    <p><strong>Matricule:</strong> {{ getVoitureData()?.matricule || 'N/A' }}</p>
+    <p><strong>Modèle:</strong> {{ getVoitureData()?.modele || 'N/A' }}</p>
+    <p><strong>Date fabrication:</strong> {{ getVoitureData()?.date_fab || 'N/A' }}</p>
+    <p><strong>Couleur:</strong> {{ getVoitureData()?.couleur || 'N/A' }}</p>
+    <p><strong>Prix de location</strong> {{ getVoitureData()?.prix_location || 'N/A' }}</p>
+    <!-- Ajoutez plus d'informations sur le client au besoin -->
+  </div>
+
+  <div class="reservation-info">
+    <h2>Reservation Information</h2>
+    <p><strong>Date de début:</strong> {{ getReservationData()?.date_debut | date }}</p>
+    <p><strong>Date de fin:</strong> {{ getReservationData()?.date_fin | date }}</p>
+  </div>
+
+  <div class="payment-info">
+    <h2>Payment Information</h2>
+    <p><strong>Type de carte:</strong> {{ getPaymentData()?.type_carte || 'N/A' }}</p>
+    <p><strong>Numéro de carte:</strong> {{ getPaymentData()?.numero_carte || 'N/A' }}</p>
+    <!-- Ajoutez plus d'informations sur le paiement au besoin -->
+  </div>
+
+  <!-- ... (autres parties de votre facture) -->
+
+  <div class="invoice-footer">
+    <button (click)="exportToPDF()">Export to PDF</button>
+  </div>
+</div>
+<footer class="footer">
+  <p>&copy; 2023 Agence de location de voitures AutoCar</p>
+  <p>Contactez-nous : info@locationvoitures.com</p>
+
+  <!-- Liens vers les réseaux sociaux -->
+  <p>Suivez-nous :</p>
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png"
+      alt="Instagram" style="width: 50px; height: 50px;">
+  </a>
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+    <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/facebook-512.png" alt="Facebook"style="width: 50px; height: 50px;">
+  </a>
+</footer>

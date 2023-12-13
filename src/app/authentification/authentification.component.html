@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/agence">Notre Agence</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/voiture">Nos voitures</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Espace d'administrateur</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+<div class="login-container">
+    <div class="login-image">
+      <!-- Ajoutez votre balise d'image ici -->
+      <img src="https://www.mamicar.com/assets/images/account.jpg" alt="Background Image" />
+    </div>
+    <div class="login-form">
+      <h1>Se connecter</h1>
+      <!-- Votre formulaire ici -->
+    <form (ngSubmit)="submitForm()" class="login-form">
+        
+      <h2>Bienvenue dans AutoCar</h2>
+      
+     
+  
+      <div class="inputs">
+        <div class="input-group">
+            <div class="input-group-prepend">
+          <label for="username">Username:</label>
+         
+          <input type="text" id="username" [(ngModel)]="username" name="username" required />
+        </div>
+        </div>
+  
+        <div class="input-group">
+          <label for="password">Password:</label>
+          
+          <input type="password" id="password" [(ngModel)]="password" name="password" required />
+        </div>
+      </div>
+  
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>

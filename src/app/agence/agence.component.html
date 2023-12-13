@@ -1,0 +1,93 @@
+<!-- agence.component.html -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/agence">Notre Agence</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/voiture">Nos voitures</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/login">Espace d'administrateur</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+  <div *ngIf="agence; else agenceNotFound" class="agence-container">
+    <div class="header">
+      
+      <h2>{{ agence.nom }}</h2>
+    </div>
+    <div class="content">
+      <div class="image">
+        <img src="https://1693852854.rsc.cdn77.org/photos/car/167/location_peugeot_208_tunis.jpg" alt="Agence Photo">
+      </div>
+      <div class="details">
+        <p> {{ agence.description }}</p>
+        <p><strong>Adresse:</strong> {{ agence.couladresse }}</p>
+        <p><strong>Téléphone:</strong> {{ agence.tel }}</p>
+        <p><strong>Email:</strong> contact@AutoCar.com</p>
+        <p><strong>Date de création:</strong> {{ agence.date_creation | date: 'dd/MM/yyyy' }}</p>
+      </div>
+    </div>
+    <div class="values">
+      <h3 class="values-heading">Nos Valeurs</h3>
+      <ul class="values-list">
+        <li class="value-item">
+          <strong class="value-title">La Proximité:</strong>
+          <span class="value-description">Il se passe une relation de confiance et de proximité avec nos clients. Chez AutoCar, nous croyons en l'importance de construire des liens solides avec chaque client. Nous ne sommes pas simplement un service de location de voitures ; nous sommes votre partenaire de confiance pour chaque trajet. Notre équipe dévouée s'engage à comprendre vos besoins uniques et à vous offrir une expérience personnalisée. Chaque interaction est une opportunité de renforcer notre relation, car nous considérons nos clients comme des membres de notre famille AutoCar. La proximité va au-delà de la distance physique ; c'est le sentiment chaleureux que vous ressentez chaque fois que vous choisissez AutoCar pour votre voyage.</span>
+        </li>
+        <li class="value-item">
+          <strong class="value-title">La Satisfaction client:</strong>
+          <span class="value-description">   Chez AutoCar, la satisfaction de nos clients est notre priorité absolue. Nous sommes à votre écoute 24 heures sur 24, 7 jours sur 7, prêts à répondre à vos besoins et à dépasser vos attentes. Chaque interaction avec notre équipe est une opportunité de créer une expérience mémorable et positive. Nous comprenons que chaque client est unique, avec des besoins spécifiques, c'est pourquoi nous nous efforçons de personnaliser nos services pour vous offrir des solutions sur mesure. Votre confort, votre sécurité et votre satisfaction sont au cœur de notre engagement. Avec AutoCar, bénéficiez d'un service exceptionnel qui va au-delà de la location de voitures, offrant une expérience client inégalée.</span>
+        </li>
+        <li class="value-item">
+          <strong class="value-title">L’Innovation:</strong>
+          <span class="value-description">Chez AutoCar, l'innovation est notre moteur. Nous nous distinguons de nos concurrents en repoussant constamment les limites et en apportant des idées novatrices dans l'industrie de la location de voitures. Notre engagement envers l'innovation se reflète dans la diversité de nos services, des solutions de location de voitures de luxe avec chauffeur à la location longue durée dédiée aux entreprises (LLD). Nous nous efforçons de rester à la pointe de la technologie et des tendances émergentes pour offrir à nos clients des expériences uniques. Avec AutoCar, bénéficiez de solutions de location de voitures avant-gardistes, adaptées aux besoins changeants de notre clientèle.</span>
+        </li>
+        <li class="value-item">
+          <strong class="value-title">L’esprit d’équipe:</strong>
+          <span class="value-description">Chez AutoCar, nous attribuons notre croissance exceptionnelle à l'esprit d'équipe qui anime chaque membre de notre organisation. Notre équipe partage une vision commune et s'engage à offrir des services exceptionnels à nos clients. Nous considérons chaque collaborateur comme un élément clé de notre succès, et cette mentalité se reflète dans notre approche collaborative et respectueuse. Chaque membre de l'équipe AutoCar contribue au succès global de l'entreprise, en assurant une expérience client exceptionnelle et en relevant les défis avec détermination. Ensemble, nous formons une famille AutoCar unie, déterminée à offrir les meilleures solutions de location de voitures sur le marché.</span>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+  
+
+  <ng-template #agenceNotFound>
+    <div class="not-found">
+      <!-- Agence not found message -->
+    </div>
+  </ng-template>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2023 Agence de location de voitures AutoCar</p>
+  <p>Contactez-nous : info@locationvoitures.com</p>
+
+  <!-- Liens vers les réseaux sociaux -->
+  <p>Suivez-nous :</p>
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png"
+      alt="Instagram" style="width: 50px; height: 50px;">
+  </a>
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+    <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/facebook-512.png" alt="Facebook"style="width: 50px; height: 50px;">
+  </a>
+</footer>

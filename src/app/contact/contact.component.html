@@ -1,0 +1,99 @@
+<!-- client.component.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/agence">Notre Agence</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/voiture">Nos voitures</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Espace d'administrateur</a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Contactez-nous</h1>
+            <hr>
+            <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="nom" class="form-label">Nom client</label>
+                            <input type="text" class="form-control" id="nom" placeholder="Entrer votre nom" name="nom" [(ngModel)]="newContact.nom" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email" placeholder="Entrer votre email" name="email" [(ngModel)]="newContact.email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="tel" class="form-label">Téléphone</label>
+                            <input type="text" class="form-control" id="tel" placeholder="Entrer votre téléphone" name="tel" [(ngModel)]="newContact.tel" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="sujet" class="form-label">Sujet</label>
+                            <input type="text" class="form-control" id="sujet" placeholder="Entrer votre sujet" name="sujet" [(ngModel)]="newContact.sujet" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contenu" class="form-label">Contenu</label>
+                    <textarea class="form-control" id="contenu" placeholder="Entrer votre Message" name="contenu" [(ngModel)]="newContact.contenu" required></textarea>
+                </div>
+
+                <button id="submitButton" type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+            <hr>
+        </div>
+
+        <div class="col-md-6">
+            <!-- Add your image here -->
+            <div class="banner">
+                <img src="assets/Capture.PNG" alt="Banner Image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2023 Agence de location de voitures AutoCar</p>
+    <p>Contactez-nous : info@locationvoitures.com</p>
+  
+    <!-- Liens vers les réseaux sociaux -->
+    <p>Suivez-nous :</p>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png"
+        alt="Instagram" style="width: 50px; height: 50px;">
+    </a>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+      <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/facebook-512.png" alt="Facebook"style="width: 50px; height: 50px;">
+    </a>
+  </footer>

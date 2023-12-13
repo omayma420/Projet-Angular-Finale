@@ -1,0 +1,100 @@
+/* Add this to your global styles or component styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.agence-container {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.details {
+  font-size: 16px;
+}
+
+.values {
+  flex: 1;
+  padding: 20px;
+}
+
+.values h3 {
+  color: #333;
+}
+
+.values ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Add this to your global styles or component styles */
+.values {
+  padding: 20px;
+}
+
+.values-heading {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.values-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.value-item {
+  margin-bottom: 20px;
+}
+
+.value-title {
+  color: #007bff; /* or any color you prefer */
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.value-description {
+  font-size: 16px;
+  color: #555;
+}
+

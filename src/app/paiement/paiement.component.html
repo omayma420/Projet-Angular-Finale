@@ -1,0 +1,66 @@
+<!-- Gestion des patients.component.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/agence">Notre Agence</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/voiture">Nos voitures</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Espace d'administrateur</a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Paiement</h1>
+  <hr>
+  <form (ngSubmit)="onSubmit()" #patientForm="ngForm">
+    <div class="form-group">
+      <label for="type_carte">Type de carte</label>
+      <select class="form-control" id="type_carte" name="type_carte" [(ngModel)]="newPaiement.type_carte" required>
+        <option value="carte_bancaire">Carte bancaire</option>
+        <option value="carte_e_dinar">Carte e-dinar</option>
+      </select>
+
+      <label for="numero_carte">Numéro de carte</label>
+      <input type="text" class="form-control" id="numero_carte" placeholder="Enter numéro de carte" [(ngModel)]="newPaiement.numero_carte" name="numero_carte" required>
+
+      <label for="date_expiration_carte">Date d'expiration de la carte</label>
+      <input type="datetime-local"  class="form-control" id="date_expiration_carte" placeholder="Enter date d'expiration de la carte" [(ngModel)]="newPaiement.date_expiration_carte" name="date_expiration_carte" required>
+      
+      
+    </div>
+    <button  id="submitButton" type="submit" class="btn btn-primary">Confirmer le paiement</button>
+  </form>
+  <hr>
+</div>
+<footer class="footer">
+  <p>&copy; 2023 Agence de location de voitures AutoCar</p>
+  <p>Contactez-nous : info@locationvoitures.com</p>
+
+  <!-- Liens vers les réseaux sociaux -->
+  <p>Suivez-nous :</p>
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png"
+      alt="Instagram" style="width: 50px; height: 50px;">
+  </a>
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+    <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/facebook-512.png" alt="Facebook"style="width: 50px; height: 50px;">
+  </a>
+</footer>

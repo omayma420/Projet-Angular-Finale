@@ -1,0 +1,131 @@
+<!-- client.component.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/agence">Notre Agence</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nos voitures</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Espace d'administrateur</a>
+                </li>
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="/gestion_client">Gestion des clients</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/ajouter">Gestion des voitures</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/reservations">Réservations</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  <div class="container">
+   
+      
+      
+    <form (ngSubmit)="onSubmit()" #clientForm="ngForm" novalidate>
+      <div class="container">
+        <h1>Gestion client</h1>
+        
+        <!-- ... (other content) -->
+      </div>
+      <!-- Add 'novalidate' attribute to the form to disable browser validation -->
+      <div class="form-group">
+        <label for="nom">Nom client</label>
+        <input type="text" class="form-control" id="nom" placeholder="Entrer votre nom" name="nom" [(ngModel)]="newClient.nom" required>
+        
+        <div *ngIf="clientForm.controls['nom'].invalid && (clientForm.controls['nom'].dirty || clientForm.controls['nom'].touched)">
+          <div class="alert alert-danger">
+            Nom client est requis.
+          </div>
+        </div>
+      
+        
+  
+        <label for="email">Email </label>
+        <input type="text" class="form-control" id="email" placeholder="Entrer votre email"  name="email" [(ngModel)]="newClient.email" required>
+  
+        <div *ngIf="clientForm.controls['email'].invalid && (clientForm.controls['email'].dirty || clientForm.controls['email'].touched)">
+          <div class="alert alert-danger">
+            Email est requis.
+          </div>
+        </div>
+  
+        <label for="adresse">Adresse</label>
+        <input type="text" class="form-control" id="adresse" placeholder="Entrer votre adresse"  name="adresse" [(ngModel)]="newClient.adresse" required>
+  
+        <div *ngIf="clientForm.controls['adresse'].invalid && (clientForm.controls['adresse'].dirty || clientForm.controls['adresse'].touched)">
+          <div class="alert alert-danger">
+            Adresse est requise.
+          </div>
+        </div>
+  
+        <label for="tel">Tel</label>
+        <input type="text" class="form-control" id="tel" placeholder="Entrer votre téléphone"  name="tel" [(ngModel)]="newClient.tel" required>
+  
+        <div *ngIf="clientForm.controls['tel'].invalid && (clientForm.controls['tel'].dirty || clientForm.controls['tel'].touched)">
+          <div class="alert alert-danger">
+            Tel est requis.
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="clientForm.invalid">Submit</button>
+      <!-- Disable the button if the form is invalid -->
+    </form>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Email</th>
+          <th scope="col">Adresse</th>
+          <th scope="col">Téléphone</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of clientArray; index as i">
+          <td>{{ t.id }}</td>
+          <td>{{ t.nom }}</td>
+          <td>{{ t.email }}</td>
+          <td>{{ t.adresse }}</td>
+          <td>{{ t.tel }}</td>
+
+          <td><button class="btn btn-warning btn-sm" (click)="onUpdate(i)">Update</button></td>
+          <td><button class="btn btn-danger btn-sm" (click)="onDelete(i)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+  </div>
+  <footer class="footer">
+  <p>&copy; 2023 Agence de location de voitures AutoCar</p>
+  <p>Contactez-nous : info@locationvoitures.com</p>
+
+  <!-- Liens vers les réseaux sociaux -->
+  <p>Suivez-nous :</p>
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png"
+      alt="Instagram" style="width: 50px; height: 50px;">
+  </a>
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+    <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/facebook-512.png" alt="Facebook"style="width: 50px; height: 50px;">
+  </a>
+</footer>
+

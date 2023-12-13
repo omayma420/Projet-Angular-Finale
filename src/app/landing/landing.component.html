@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Add Font Awesome link for the icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+
+    <title>Agence de location de Voitures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        .car-section {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .testimonial-section {
+            background-color: #e0e0e0;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/agence">Notre Agence</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/voiture">Nos voitures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Espace d'administrateur</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Location de voitures AutoCar</h1>
+        <p>Explorez le monde à votre rythme. Notre site de location de voitures offre la clé de votre prochaine
+            aventure, où que la route puisse vous mener. Confort, liberté et découvertes vous attendent. Louez une voiture,
+            créez des souvenirs et vivez l'expérience de la route</p>
+            
+    </header>
+
+    <!-- Replace your MDB carousel code with this HTML-based carousel -->
+
+    <!-- Replace your Bootstrap carousel code with this HTML-based carousel -->
+
+    <section class="car-section">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://cdn2.webmanagercenter.com/wmc/wp-content/uploads/2020/03/nouvelle-suzuki-vatara.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.tunisienumerique.com/wp-content/uploads/2022/01/voitures-de-luxe.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="https://s1.1zoom.me/big0/86/Mercedes-Benz_Brabus_W447_V-class_Black_Metallic_590827_1280x720.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <script>
+        // Initialize the Bootstrap Carousel
+        var myCarousel = new bootstrap.Carousel(document.getElementById('myCarousel'), {
+            interval: 3000, // Set the interval between slides (in milliseconds), e.g., 5000ms = 5 seconds
+            // Add any other options you may need
+        });
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 d-flex">
+                <div class="card flex-fill" style="width: 18rem;">
+                    <img src="https://1693852854.rsc.cdn77.org/photos/car/312/location_suzuki_swift_Zaghouan.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Suzuki Swift 2020</h5>
+                        <p class="card-text">Moteurs essence économes en carburant. Maniabilité agile et conduite confortable en
+                            ville. Options de transmission manuelle ou automatique.</p>
+                        <a href="/voiture" class="btn btn-primary">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 d-flex">
+                <div class="card flex-fill" style="width: 18rem;">
+                    <img src="https://1693852854.rsc.cdn77.org/photos/car/309/location_vwpolo8_lamarsa.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Polo 8 2021</h5>
+                        <p class="card-text">Motorisations essence et diesel disponibles. Options de transmission manuelle ou
+                            automatique. Technologies avancées pour l'efficacité énergétique.</p>
+                        <a href="/voiture" class="btn btn-primary">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 d-flex">
+                <div class="card flex-fill" style="width: 18rem;">
+                    <img src="https://1693852854.rsc.cdn77.org/photos/car/167/location_peugeot_208_tunis.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Volkswagen Virtus Automatique 2024</h5>
+                        <p class="card-text">Style compact et urbain. Calandre distinctive de la marque Hyundai. Lignes de
+                            carrosserie fluides.</p>
+                        <a href="/voiture" class="btn btn-primary">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 d-flex">
+                <div class="card flex-fill" style="width: 18rem;">
+                    <img src="https://1693852854.rsc.cdn77.org/photos/car/295/location_voiture_boite-auto_tunis.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hyundai GI10 Automatique 2020</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="/voiture" class="btn btn-primary">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <section class="testimonial-section">
+        <h2>Témoignages Clients</h2>
+        <!-- Your testimonial cards code -->
+        <div class="card">
+            <div class="card-body">
+                <img src="https://1693852854.rsc.cdn77.org/photos/content/images/men.png" alt=""
+                    class="img-fluid">
+                <h3 class="card-title">Ahmad </h3>
+                <p class="card-text">20/20</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <img src="https://1693852854.rsc.cdn77.org/photos/content/images/men.png" alt=""
+                    class="img-fluid">
+                <h3 class="card-title">Jamila </h3>
+                <p class="card-text">Très bonne expérience Je recommande</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <img src="https://1693852854.rsc.cdn77.org/photos/content/images/men.png" alt=""
+                    class="img-fluid">
+                <h3 class="card-title">Mohamed Jamil</h3>
+                <p class="card-text">agence et personnel très sérieux et tres professionnelle; ils sont ponctuel.je
+                    recommande.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 Agence de location de voitures AutoCar</p>
+        <p>Contactez-nous : info@locationvoitures.com</p>
+      
+        <!-- Liens vers les réseaux sociaux -->
+        <p>Suivez-nous :</p>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png"
+            alt="Instagram" style="width: 50px; height: 50px;">
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+          <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/facebook-512.png" alt="Facebook"style="width: 50px; height: 50px;">
+        </a>
+      </footer>
+
+    <!-- Include Bootstrap and jQuery scripts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

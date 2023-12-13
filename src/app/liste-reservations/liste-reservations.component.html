@@ -1,0 +1,96 @@
+<!-- liste-reservations.component.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/agence">Notre Agence</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Nos voitures</a>
+              </li>
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="/login">Espace d'administrateur</a>
+              </li>
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="/login">Espace d'administrateur</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/gestion_client">Gestion des clients</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/ajouter">Gestion des voitures</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/reservations">Réservations</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+<h2>Ajouter une nouvelle réservation</h2>
+<form>
+  <label>Client:
+    <select [(ngModel)]="newReservation.client.id" name="client" required>
+      <option *ngFor="let client of clients" [value]="client.id">{{ client.nom }}</option>
+    </select>
+  </label><br>
+  <label>Voiture:
+    <select [(ngModel)]="newReservation.voiture.id" name="voiture" required>
+      <option *ngFor="let voiture of voitures" [value]="voiture.id">{{ voiture.modele }}</option>
+    </select>
+  </label><br>
+  <label>Date de début: <input [(ngModel)]="newReservation.date_debut" name="date_debut" type="datetime-local" required></label><br>
+  <label>Date de fin: <input [(ngModel)]="newReservation.date_fin" name="date_fin" type="datetime-local" required></label><br>
+
+  <button type="button" (click)="ajouterReservation()">Ajouter</button>
+</form>
+
+<h2>Liste des Réservations</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Modèle de voiture</th>
+      <th>Date de début</th>
+      <th>Date de fin</th>
+      <!-- Ajoutez d'autres en-têtes de colonne selon vos besoins -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reservation of reservations">
+      <td>
+        {{ reservation.client?.nom || 'N/A' }}
+      </td>
+      <td>
+        {{ reservation.voiture?.modele || 'N/A' }}
+      </td>
+      <td>{{ reservation.date_debut }}</td>
+      <td>{{ reservation.date_fin }}</td>
+      <!-- Ajoutez d'autres cellules de données selon vos besoins -->
+    </tr>
+  </tbody>
+</table>
+<footer class="footer">
+  <p>&copy; 2023 Agence de location de voitures AutoCar</p>
+  <p>Contactez-nous : info@locationvoitures.com</p>
+
+  <!-- Liens vers les réseaux sociaux -->
+  <p>Suivez-nous :</p>
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png"
+      alt="Instagram" style="width: 50px; height: 50px;">
+  </a>
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+    <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/facebook-512.png" alt="Facebook"style="width: 50px; height: 50px;">
+  </a>
+</footer>

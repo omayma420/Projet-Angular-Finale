@@ -1,0 +1,62 @@
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Ajoutez ces styles dans votre feuille de style CSS */
+
+.invoice {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.invoice-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.invoice-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Ajoutez d'autres styles au besoin */
+/* Ajoutez ces styles dans votre feuille de style CSS ou balise <style> */
+
+.invoice-footer {
+text-align: center; /* Centre le bouton horizontalement */
+margin-top: 20px;   /* Ajoute une marge en haut pour l'espace */
+}
+
+.invoice-footer button {
+padding: 10px 20px;  /* Ajoute du rembourrage autour du texte du bouton */
+font-size: 16px;     /* Ajuste la taille de la police */
+background-color: #3498db; /* Couleur de fond du bouton */
+color: #fff;         /* Couleur du texte du bouton */
+border: none;        /* Supprime la bordure du bouton */
+border-radius: 5px;  /* Ajoute des coins arrondis au bouton */
+cursor: pointer;     /* Change le curseur au survol du bouton */
+}
+
+.invoice-footer button:hover {
+background-color: #2980b9; /* Couleur de fond du bouton au survol */
+}
+/* Ajoutez ces styles dans votre feuille de style CSS ou balise <style> */
+
+.logo {
+position: fixed;
+top: 100px; /* Ajustez la position verticale du logo */
+left: 400px; /* Ajustez la position horizontale du logo */
+height: 60px; /* Ajustez la hauteur du logo */
+}
+  

@@ -1,0 +1,16 @@
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}  
+/* Ajoutez cette partie à votre code CSS ou dans une balise <style> dans le <head> de votre document */
+.nav-item a {
+    /* Styles pour tous les liens .nav-item */
+}
+
+.nav-item a[href="/gestion_client"],
+.nav-item a[href="/ajouter"],
+.nav-item a[href="/reservations"] {
+    color: blue; /* Couleur du texte pour les liens spécifiques */
+}
